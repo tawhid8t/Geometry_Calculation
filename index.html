@@ -16,6 +16,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: "Mukta", sans-serif;
+            
         }
         
     </style>
@@ -35,7 +36,7 @@
             <div class="flex gap-4 flex-col-reverse md:flex-row">
                 <div class="flex-1 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
                     <!-- Triangle -->
-                    <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#FBBCED] ">
+                    <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#FBBCED] cursor-pointer">
                         <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Triangle</h2>
@@ -51,125 +52,125 @@
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl" id="calculate">Calculate</button>
+                            <button class="btn btn-primary w-full text-white font-bold text-xl" id="calculate-triangle">Calculate</button>
                           </div>
                         </div>
                       </div>
 
-                      <!-- card-2 -->
-                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#eb6960e8] ">
+                      <!-- Rectangle -->
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#eb6960e8] cursor-pointer">
                         <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Rectangle</h2>
                           <p>Area (A) = w x l</p>
                           <div class="flex gap-2">
                             <div class="flex gap-1 items-center">
-                                <input type="text" placeholder="w" class="input input-bordered w-full max-w-xs"/>
+                                <input type="text" placeholder="w" id="rectangle-base" class="input input-bordered w-full max-w-xs"/>
                                 <span>cm</span>
                             </div>
                           <div class="flex gap-1 items-center">
-                            <input type="text" placeholder="l" class="input input-bordered w-full max-w-xs"/>
+                            <input type="text" placeholder="l" id="rectangle-height" class="input input-bordered w-full max-w-xs"/>
                             <span>cm</span>
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                            <button class="btn btn-primary w-full text-white font-bold text-xl" id="calculate-rectangle">Calculate</button>
                           </div>
                         </div>
                       </div>
 
-                      <!-- card-3 -->
-                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#56f1f1e3] ">
+                      <!-- Parallelogram -->
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#56f1f1e3] cursor-pointer">
                         <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Parallelogram</h2>
                           <p>Area (A) = b x h</p>
                           <div class="flex gap-2">
                             <div class="flex gap-1 items-center">
-                                <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                                <input type="text" placeholder="b" id="parallelogram-base" class="input input-bordered w-full max-w-xs"/>
                                 <span>cm</span>
                             </div>
                           <div class="flex gap-1 items-center">
-                            <input type="text" placeholder="h" class="input input-bordered w-full max-w-xs"/>
+                            <input type="text" placeholder="h" id="parallelogram-height" class="input input-bordered w-full max-w-xs"/>
                             <span>cm</span>
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                            <button id="calculate-parallelogram" class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
                           </div>
                         </div>
                       </div>
 
                       <!-- Rhombus -->
-                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#69C7F0] ">
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#69C7F0] cursor-pointer">
                         <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Rhombus</h2>
                           <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                           <div class="flex gap-2">
                             <div class="flex gap-1 items-center">
-                                <input type="text" placeholder="d1" class="input input-bordered w-full max-w-xs"/>
+                                <input type="text" placeholder="d1" id="rhombus-base" class="input input-bordered w-full max-w-xs"/>
                                 <span>cm</span>
                             </div>
                           <div class="flex gap-1 items-center">
-                            <input type="text" placeholder="d2" class="input input-bordered w-full max-w-xs"/>
+                            <input type="text" placeholder="d2" id="rhombus-height" class="input input-bordered w-full max-w-xs"/>
                             <span>cm</span>
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                            <button id="calculate-rhombus" class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
                           </div>
                         </div>
                       </div>
 
                        <!-- Pentagon-->
-                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#5eeb88] ">
+                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#5eeb88] cursor-pointer">
                         <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Pentagon</h2>
                           <p>Area (A) = 0.5 x p x b</p>
                           <div class="flex gap-2">
                             <div class="flex gap-1 items-center">
-                                <input type="text" placeholder="p" class="input input-bordered w-full max-w-xs"/>
+                                <input type="text" placeholder="p" id="pentagon-base" class="input input-bordered w-full max-w-xs"/>
                                 <span>cm</span>
                             </div>
                           <div class="flex gap-1 items-center">
-                            <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                            <input type="text" placeholder="b" id="pentagon-height" class="input input-bordered w-full max-w-xs"/>
                             <span>cm</span>
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                            <button id="calculate-pentagon" class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
                           </div>
                         </div>
                       </div>
 
                        <!-- Ellipse -->
-                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#b261e7] ">
+                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#b261e7] cursor-pointer">
                         <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
                         <div class="card-body text-center">
                           <h2 class="card-title mx-auto">Ellipse</h2>
                           <p>Area (A) = pi x a x b</p>
                           <div class="flex gap-2">
                             <div class="flex gap-1 items-center">
-                                <input type="text" placeholder="a" class="input input-bordered w-full max-w-xs"/>
+                                <input type="text" placeholder="a" id="ellipse-base" class="input input-bordered w-full max-w-xs"/>
                                 <span>cm</span>
                             </div>
                           <div class="flex gap-1 items-center">
-                            <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                            <input type="text" placeholder="b" id="ellipse-height" class="input input-bordered w-full max-w-xs"/>
                             <span>cm</span>
                           </div>
                           </div>
                           <div class="card-actions justify-end mt-4">
-                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                            <button id="calculate-ellipse" class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
                           </div>
                         </div>
                       </div>
                 </div>
                 <div class="mx-auto w-80 md:w-64 lg:w-72 border-2 h-96 rounded-lg text-center">
                     <h3 class="underline font-bold mt-4">Area Calculation</h3>
-                    <ul class="text-left pl-4 mt-5" id="calculated-area">
-                        <li class="list-decimal">Total some is:</li>
+                    <ul class="text-left ml-8 mt-5" id="calculated-area">
+                        
                     </ul>
                 </div>
             </div>
