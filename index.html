@@ -4,11 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Calculation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- custom css style -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Mukta", sans-serif;
+        }
+        
+    </style>
 </head>
 <body>
+    <section>
+        <div class="container lg:w-7/8 my-10 lg:mx-auto">
+            <div class="flex justify-between items-center px-10 py-4 rounded-lg bg-[#1090D81A] mb-10">
+                <div>
+                    <h1 class="text-4xl font-extrabold text-[#111111CC]">Interactive</h1>
+                    <h3 class="text-3xl font-normal text-[#111111CC]">Geometry Calculation</h3>
+                </div>
+                <div>
+                    <button class="btn btn-info text-white text-xl">Blog</button>
+                </div>
+            </div>
+            <div class="flex gap-4 flex-col-reverse md:flex-row">
+                <div class="flex-1 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 ">
+                    <!-- Triangle -->
+                    <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#FBBCED] ">
+                        <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Triangle</h2>
+                          <p>Area (A) = 0.5 x h x b</p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs" id="triangle-base"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="h" class="input input-bordered w-full max-w-xs " id="triangle-height"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl" id="calculate">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- card-2 -->
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#eb6960e8] ">
+                        <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Rectangle</h2>
+                          <p>Area (A) = w x l</p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="w" class="input input-bordered w-full max-w-xs"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="l" class="input input-bordered w-full max-w-xs"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- card-3 -->
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#56f1f1e3] ">
+                        <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Parallelogram</h2>
+                          <p>Area (A) = b x h</p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="h" class="input input-bordered w-full max-w-xs"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Rhombus -->
+                      <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#69C7F0] ">
+                        <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Rhombus</h2>
+                          <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="d1" class="input input-bordered w-full max-w-xs"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="d2" class="input input-bordered w-full max-w-xs"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                       <!-- Pentagon-->
+                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#5eeb88] ">
+                        <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Pentagon</h2>
+                          <p>Area (A) = 0.5 x p x b</p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="p" class="input input-bordered w-full max-w-xs"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                       <!-- Ellipse -->
+                       <div class="card bg-base-100 shadow-xl pt-8 hover:bg-[#b261e7] ">
+                        <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                        <div class="card-body text-center">
+                          <h2 class="card-title mx-auto">Ellipse</h2>
+                          <p>Area (A) = pi x a x b</p>
+                          <div class="flex gap-2">
+                            <div class="flex gap-1 items-center">
+                                <input type="text" placeholder="a" class="input input-bordered w-full max-w-xs"/>
+                                <span>cm</span>
+                            </div>
+                          <div class="flex gap-1 items-center">
+                            <input type="text" placeholder="b" class="input input-bordered w-full max-w-xs"/>
+                            <span>cm</span>
+                          </div>
+                          </div>
+                          <div class="card-actions justify-end mt-4">
+                            <button class="btn btn-primary w-full text-white font-bold text-xl">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="mx-auto w-80 md:w-64 lg:w-72 border-2 h-96 rounded-lg text-center">
+                    <h3 class="underline font-bold mt-4">Area Calculation</h3>
+                    <ul class="text-left pl-4 mt-5" id="calculated-area">
+                        <li class="list-decimal">Total some is:</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
 
+
+
+
+
+
+
+
+
     <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
